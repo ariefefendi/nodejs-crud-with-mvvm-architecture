@@ -105,70 +105,49 @@ Responsible for:
 
 ---
 
-# Request Flow
+## Request Flow
 
-```
+```text
 Browser
-
-      │
-
-      ▼
-
-Knockout ViewModel
-
-      │
-
- AJAX Request
-
-      ▼
-
-Express Router
-
-      │
-
-      ▼
-
-Controller
-
-      │
-
-      ▼
-
-Model
-
-      │
-
-      ▼
-
-MySQL
-
-      │
-
-      ▼
-
-JSON Response
-
-      │
-
-      ▼
-
-ViewModel Update
-
-      │
-
-      ▼
-
+    │
+    ▼
+Knockout.js ViewModel
+    │
+    ▼
+AJAX / HTTP Request
+    │
+    ▼
+Express.js Application (index.js)
+    │
+    ▼
+MySQL Database
+    │
+    ▼
+JSON / HTML Response
+    │
+    ▼
+Knockout.js Updates the UI
+    │
+    ▼
 Browser
 ```
+
+### Request Lifecycle
+
+1. The user interacts with the web interface.
+2. Knockout.js captures user actions and prepares the request.
+3. An HTTP request is sent to the Express.js application.
+4. Express.js processes the request and executes the required SQL queries.
+5. MySQL returns the requested data.
+6. Express.js sends a JSON or rendered HTML response back to the client.
+7. Knockout.js automatically updates the user interface using observable bindings.
+
 
 ---
 
 # Project Structure
 
 ```
-project/
-
-```text
 project/
 │
 ├── public/                 # Static assets (CSS, JavaScript, Images)
@@ -186,7 +165,7 @@ project/
 ```
 
 ### Directory Overview
-
+```
 | File / Directory      | Description                                                                          |
 | --------------------- | ------------------------------------------------------------------------------------ |
 | **public/**           | Contains static assets such as CSS, JavaScript, and images.                          |
