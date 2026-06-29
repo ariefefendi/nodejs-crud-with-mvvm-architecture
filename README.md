@@ -49,32 +49,29 @@ A simple CRUD application built with **Node.js**, **Express.js**, **Knockout.js*
 
 ---
 
-# MVVM Architecture
+## MVVM-Based Architecture
 
-```
-                User
-                  │
-                  ▼
-          Knockout.js View
-                  │
-          Data Binding
-                  │
-                  ▼
-            ViewModel
-                  │
-          HTTP Request
-                  │
-                  ▼
-         Express Controller
-                  │
-                  ▼
-               Model
-                  │
-                  ▼
-               MySQL
+```mermaid
+flowchart TD
+
+    A["View<br/>HTML + Handlebars"]
+    B["ViewModel<br/>Knockout.js"]
+    C["Express.js Application<br/>index.js"]
+    D["MySQL Database"]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> C
+    C --> B
+    B --> A
 ```
 
-The project follows the **MVVM (Model–View–ViewModel)** pattern to separate concerns between the user interface, business logic, and database layer.
+### Architecture Overview
+
+The frontend follows the MVVM (Model–View–ViewModel) pattern using Knockout.js for two-way data binding and UI state management.
+
+On the backend, Express.js provides routing and business logic in a lightweight structure. For simplicity, the current implementation centralizes routing, controller logic, and SQL queries within a single `index.js` file, making it suitable for learning purposes and small CRUD applications.
 
 ### Model
 
