@@ -313,21 +313,6 @@ Using MVVM provides several advantages:
 
 ---
 
-# Future Improvements
-
-* JWT Authentication
-* User Login
-* Role & Permission
-* Pagination
-* Search & Filter
-* Validation
-* File Upload
-* Docker Support
-* Unit Testing
-* API Documentation (Swagger/OpenAPI)
-
----
-
 # License
 
 This project is intended for educational purposes and serves as a simple reference implementation of the **MVVM architectural pattern** using Node.js, Express.js, Knockout.js, and MySQL.
