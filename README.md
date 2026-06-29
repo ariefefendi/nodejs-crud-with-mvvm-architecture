@@ -73,32 +73,38 @@ The frontend follows the MVVM (Model–View–ViewModel) pattern using Knockout.
 
 On the backend, Express.js provides routing and business logic in a lightweight structure. For simplicity, the current implementation centralizes routing, controller logic, and SQL queries within a single `index.js` file, making it suitable for learning purposes and small CRUD applications.
 
-### Model
+### Project Components
+
+#### Express.js Application
 
 Responsible for:
 
-* Database access
-* SQL queries
-* CRUD operations
+* Routing HTTP requests
+* Executing SQL queries
+* Performing CRUD operations
+* Returning HTML or JSON responses
 
-### View
+---
 
-Responsible for:
+#### View
 
 * HTML
-* Handlebars templates
+* Handlebars (HBS)
 * User Interface
 
-### ViewModel
+---
 
-Implemented using **Knockout.js**.
+#### ViewModel
+
+Implemented using Knockout.js.
 
 Responsible for:
 
 * Observable data
-* Form binding
+* Two-way data binding
 * AJAX communication
 * UI state management
+
 
 ---
 
