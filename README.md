@@ -168,33 +168,35 @@ Browser
 ```
 project/
 
-├── app.js
-├── package.json
+```text
+project/
 │
-├── config/
-│   └── database.js
-│
-├── controllers/
-│   └── userController.js
-│
-├── models/
-│   └── userModel.js
-│
-├── routes/
-│   └── routes.js
-│
-├── public/
-│   ├── js/
-│   │   └── viewmodel.js
+├── public/                 # Static assets (CSS, JavaScript, Images)
 │   ├── css/
+│   ├── js/
 │   └── images/
 │
-├── views/
-│   ├── index.hbs
-│   └── layout.hbs
+├── views/                  # Handlebars (HBS) templates
 │
-└── database/
-    └── database.sql
+├── db_node_crud.sql        # MySQL database schema
+├── index.js                # Main application entry point
+├── package.json            # Project dependencies
+├── package-lock.json       # Dependency lock file
+└── README.md               # Project documentation
+```
+
+### Directory Overview
+
+| File / Directory      | Description                                                                          |
+| --------------------- | ------------------------------------------------------------------------------------ |
+| **public/**           | Contains static assets such as CSS, JavaScript, and images.                          |
+| **views/**            | Contains Handlebars (`.hbs`) templates for rendering the user interface.             |
+| **db_node_crud.sql**  | MySQL database schema and sample data for the application.                           |
+| **index.js**          | Main entry point of the Express.js application, including routes and business logic. |
+| **package.json**      | Defines project metadata and Node.js dependencies.                                   |
+| **package-lock.json** | Locks dependency versions for consistent installations.                              |
+| **README.md**         | Project documentation and setup guide.                                               |
+
 ```
 
 ---
